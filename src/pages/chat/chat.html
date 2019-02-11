@@ -50,7 +50,7 @@
     <ion-item>
       <ion-input #input (ionChange)='onChangeText($event)' type="text" placeholder="Your message here.." [(ngModel)]="formValue" (keyup.enter)="sendMessage()"></ion-input>
 
-      <button ion-button [disabled]="!isenabled" icon-only item-right clear (click)="sendMessage(); input.setFocus()">
+      <button ion-button [disabled]="disabled" icon-only item-right clear (click)="sendMessage(); input.setFocus()">
         <ion-icon name="send"></ion-icon>
       </button>
     </ion-item>

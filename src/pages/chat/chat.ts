@@ -16,7 +16,7 @@ export class ChatPage implements OnInit {
   messages: Observable<Message[]>;
   formValue: string;
   isLoading: boolean = false;
-  isEnabled: boolean = false;
+  disabled: boolean = true;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public chat: ChatProvider, public events: Events) {
   }
@@ -42,11 +42,12 @@ export class ChatPage implements OnInit {
     })
   }
 
-  onChangeText(a:any){
-    if(a.length > 3){
-      this.isEnabled = true
+  async onChangeText(a:any){
+    console.log(a)
+    if(this.formValue.length > 2){
+      this.disabled = false
     } else {
-      this.isEnabled = false
+      this.disabled = true
     }
   }
 
@@ -57,7 +58,7 @@ export class ChatPage implements OnInit {
       this.formValue = '';
       this.isLoading = true;
     } else {
-      this.isEnabled = false
+      this.disabled = true
     }
     
   }
