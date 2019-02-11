@@ -1,0 +1,59 @@
+5<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Ask
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div *ngFor="let message of messages | async" class="message-wrapper">
+        <div *ngIf="message.sentBy === 'bot'">
+          <img class="profile-pic left" src="https://clueberryworld.org/wp-content/peepso/users/34/6d3d5e8cd9-avatar-full.jpg" />
+          <!--  wave-->
+          <div class="chat-bubble left slide-left">
+    
+            <div class="message" autolinker>{{message.content}}</div>
+    
+            <!--<div class="message-detail">
+              <span class="bold">Username</span>
+            </div>-->
+    
+          </div>
+        </div>
+        <div *ngIf="message.sentBy === 'user'">
+          <img class="profile-pic left" src="https://clueberryworld.org/wp-content/peepso/users/34/6d3d5e8cd9-avatar-full.jpg" />
+          <!--  wave-->
+          <div class="chat-bubble right slide-right">
+    
+            <div class="message" autolinker>{{message.content}}</div>
+    
+            <!--<div class="message-detail">
+              <span class="bold">Username</span>
+            </div>-->
+    
+          </div>
+        </div>
+    </div>
+
+    <div *ngIf="isLoading" class="typing-indicator">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+  
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-item>
+      <ion-input #input (ionChange)='onChangeText($event)' type="text" placeholder="Your message here.." [(ngModel)]="formValue" (keyup.enter)="sendMessage()"></ion-input>
+
+      <button ion-button [disabled]="!isenabled" icon-only item-right clear (click)="sendMessage(); input.setFocus()">
+        <ion-icon name="send"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-toolbar>
+</ion-footer>
+

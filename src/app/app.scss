@@ -14,3 +14,27 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+@font-face {
+    font-family: Rubik;
+    src: url(../assets/fonts/rubik-v7-latin-regular.woff2)
+    }
+    @font-face {
+    font-family: Rubik300;
+    src: url(../assets/fonts/rubik-v7-latin-300.woff2)
+    }
+    @font-face {
+    font-family: Rubik500;
+    src: url(../assets/fonts/rubik-v7-latin-500.woff2)
+    }
+    @font-face {
+      font-family: Rubik700;
+      src: url(../assets/fonts/rubik-v7-latin-700.woff2)
+      }
+    h1, h2, h3, h4, h5, h6, ion-title, ion-label, span, ion-card-title {
+    font-family: 'Rubik' !important;
+    }
+    body, p, a, ion-card-content, ion-card, ion-content, ion-input, ion-header {
+    font-family: 'Rubik' !important;
+    
+  }

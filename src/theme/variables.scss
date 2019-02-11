@@ -24,7 +24,6 @@ $app-direction: ltr;
 
 
 
-
 // Named Color Variables
 // --------------------------------------------------
 // Named colors makes it easy to reuse colors on various components.
@@ -34,10 +33,13 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
+  primary:    #209485,
+  secondary:  #5f7a8a,
   danger:     #f53d3d,
-  light:      #f4f4f4,
+  light:      (
+    base: #ffffff,
+    contrast: #209485
+  ),
   dark:       #222
 );
 
@@ -81,8 +83,4 @@ $colors: (
 @import "ionic.ionicons";
 
 
-// Fonts
-// --------------------------------------------------
 
-@import "roboto";
-@import "noto-sans";
