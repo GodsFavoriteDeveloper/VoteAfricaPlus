@@ -7,6 +7,22 @@
 </ion-header>
 
 <ion-content>
+    <div class="message-wrapper">
+        <div>
+          <img class="profile-pic left" src="https://clueberryworld.org/wp-content/peepso/users/34/6d3d5e8cd9-avatar-full.jpg" />
+          <!--  wave-->
+          <div class="chat-bubble left slide-left">
+    
+            <div class="message" autolinker>Hi, i'm the Vote Africa online agent. What elections questions do you have today?</div>
+    
+            <!--<div class="message-detail">
+              <span class="bold">Username</span>
+            </div>-->
+    
+          </div>
+        </div>
+    </div>
+
     <div *ngFor="let message of messages | async" class="message-wrapper">
         <div *ngIf="message.sentBy === 'bot'">
           <img class="profile-pic left" src="https://clueberryworld.org/wp-content/peepso/users/34/6d3d5e8cd9-avatar-full.jpg" />

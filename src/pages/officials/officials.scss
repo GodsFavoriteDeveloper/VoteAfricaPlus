@@ -1,0 +1,74 @@
+page-officials {
+    ion-slides {
+        display: inline !important;
+    }
+    ion-content {
+        background: #fff !important;
+    }
+    .poster {
+        height: 150px;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+    }
+    .boxf {
+        background: rgba(0,0,0,0.7);
+        width: 100%;
+        text-align: start;
+        padding: 5px;
+        color: #d1a917;
+    }
+
+    .poster-card {
+        height: 70px;
+        width: 100%;
+        border-radius: 5px
+    }
+    h4 {
+        margin-top: 1.0rem !important;
+    }
+
+    .scroll-content {
+        padding: 2px !important;
+    }
+    .swiper-container {
+        height: auto !important;
+    }
+    .swiper-slide {
+        background-size: cover;
+    }
+    .card {
+        margin: 0 !important;
+        border-radius: 2px;
+        width: 100% !important;
+        background-size: cover
+    }
+    .card-content-md {
+        padding: 3px 2px !important;
+        font-size: 1.2rem !important;
+        line-height: 1.0 !important;
+    }
+    .tops {
+        font-size: 15px!important;
+        font-weight: bold !important;
+    }
+    .top {
+        font-size: 15px!important;
+        font-weight: 700!important;
+        color: #d0a331 !important;
+        text-align: end !important;
+    }
+    h6 {
+        font-family: 'Rubik' !important;
+    }
+    .card-md p {
+        line-height: 1.2 !important;
+        font-size: 1.1rem !important;
+    }
+    [col-3] {
+        padding: 0px !important;
+    }
+    [col-9] {
+        padding: 0px !important;
+    }
+}
