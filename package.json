@@ -1,8 +1,8 @@
 {
   "name": "VoteAfricaPlus",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "author": "Vote Africa",
+  "homepage": "http://vote-africa.org/",
   "private": true,
   "scripts": {
     "start": "ionic-app-scripts serve",

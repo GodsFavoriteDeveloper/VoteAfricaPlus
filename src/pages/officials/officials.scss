@@ -24,10 +24,6 @@ page-officials {
         width: 100%;
         border-radius: 5px
     }
-    h4 {
-        margin-top: 1.0rem !important;
-    }
-
     .scroll-content {
         padding: 2px !important;
     }
@@ -48,27 +44,10 @@ page-officials {
         font-size: 1.2rem !important;
         line-height: 1.0 !important;
     }
-    .tops {
-        font-size: 15px!important;
-        font-weight: bold !important;
+    .row {
+        background: #eee !important
     }
-    .top {
-        font-size: 15px!important;
-        font-weight: 700!important;
-        color: #d0a331 !important;
-        text-align: end !important;
-    }
-    h6 {
-        font-family: 'Rubik' !important;
-    }
-    .card-md p {
-        line-height: 1.2 !important;
-        font-size: 1.1rem !important;
-    }
-    [col-3] {
-        padding: 0px !important;
-    }
-    [col-9] {
-        padding: 0px !important;
+    p.tops {
+        line-height: 0.1 !important;
     }
 }

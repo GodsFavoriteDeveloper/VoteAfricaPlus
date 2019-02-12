@@ -1,9 +1,10 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
-import { IonicPage, NavController, NavParams, Content } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Content, AlertController } from 'ionic-angular';
 import { ChatProvider, Message } from '../../providers/chat/chat';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/scan';
 import { Events } from 'ionic-angular';
+import { text } from '@angular/core/src/render3/instructions';
 
 
 @IonicPage()
@@ -18,8 +19,9 @@ export class ChatPage implements OnInit {
   isLoading: boolean = false;
   disabled: boolean = true;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public chat: ChatProvider, public events: Events) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public chat: ChatProvider, public events: Events, public alertCtrl: AlertController) {
   }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ChatPage');

@@ -1,5 +1,5 @@
 5<ion-header>
-  <ion-navbar color="primary">
+  <ion-navbar color="headerBG">
     <ion-title>
       Ask
     </ion-title>
@@ -9,15 +9,15 @@
 <ion-content>
     <div class="message-wrapper">
         <div>
-          <img class="profile-pic left" src="https://clueberryworld.org/wp-content/peepso/users/34/6d3d5e8cd9-avatar-full.jpg" />
+          <img class="profile-pic left" src="assets/img/water.jpg" />
           <!--  wave-->
           <div class="chat-bubble left slide-left">
     
             <div class="message" autolinker>Hi, i'm the Vote Africa online agent. What elections questions do you have today?</div>
     
-            <!--<div class="message-detail">
-              <span class="bold">Username</span>
-            </div>-->
+            <div class="message-detail">
+              <span class="bold">Vote Africa Agent</span>
+            </div>
     
           </div>
         </div>
@@ -31,22 +31,22 @@
     
             <div class="message" autolinker>{{message.content}}</div>
     
-            <!--<div class="message-detail">
-              <span class="bold">Username</span>
-            </div>-->
+            <div class="message-detail">
+              <span class="bold">Vote Africa Agent</span>
+            </div>
     
           </div>
         </div>
         <div *ngIf="message.sentBy === 'user'">
-          <img class="profile-pic left" src="https://clueberryworld.org/wp-content/peepso/users/34/6d3d5e8cd9-avatar-full.jpg" />
+          <img class="profile-pic right" src="assets/img/water.jpg" />
           <!--  wave-->
           <div class="chat-bubble right slide-right">
     
-            <div class="message" autolinker>{{message.content}}</div>
+            <div class="message-right" autolinker>{{message.content}}</div>
     
-            <!--<div class="message-detail">
-              <span class="bold">Username</span>
-            </div>-->
+            <div class="message-detail">
+              <span class="bold">Norman Dube</span>
+            </div>
     
           </div>
         </div>

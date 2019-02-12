@@ -1,7 +1,5 @@
-//import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ApiAiClient } from 'api-ai-javascript/es6/ApiAiClient';
-//import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { environment } from './environments/environments';
 import { Events } from 'ionic-angular';
@@ -21,7 +19,7 @@ export class ChatProvider {
 
   conversation = new BehaviorSubject<Message[]>([]);
 
-  constructor(public events: Events) {}
+  constructor(public events: Events,) {}
 
   // Sends and receives messages via DialogFlow
   converse(msg: string) {

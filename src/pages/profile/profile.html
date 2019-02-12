@@ -1,15 +1,66 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="headerBG">
     <ion-title>My Profile</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <ion-item>
-      <ion-icon name="heart-outline" item-start></ion-icon>
-      <h2>Vote Africa Plus</h2>
-      <p>I hope this looks really good</p>
-    </ion-item>
-  </ion-card>
+    <ion-row class="row">
+        <ion-col class="col" col-9="">
+            <p class="tops">You Are Following</p>
+        </ion-col>
+      </ion-row>
+    <ion-slides spaceBetween="3" slidesPerView="4.2" pager="false">
+        <ion-slide>
+          <ion-card class="poster-card" [style.backgroundImage]="'url(assets/img/election.jpg)'"></ion-card>
+        </ion-slide>
+    
+        <ion-slide>
+          <ion-card class="poster-card" [style.backgroundImage]="'url(assets/img/water.jpg)'"></ion-card>
+        </ion-slide>
+    
+        <ion-slide>
+          <ion-card class="poster-card" [style.backgroundImage]="'url(assets/img/election.jpg)'"></ion-card>
+        </ion-slide>
+
+        <ion-slide>
+          <ion-card class="poster-card" [style.backgroundImage]="'url(assets/img/water.jpg)'"></ion-card>
+        </ion-slide>
+        
+        <ion-slide>
+          <ion-card class="poster-card" [style.backgroundImage]="'url(assets/img/election.jpg)'"></ion-card>
+        </ion-slide>
+    </ion-slides>
+
+    <ion-row class="row">
+      <ion-col class="col" col-9="">
+          <p class="tops">My Feed</p>
+      </ion-col>
+    </ion-row>
+    <ion-list>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/img/water.jpg">
+        </ion-avatar>
+        <h2>My Neighbor Totoro</h2>
+        <p>Hayao Miyazaki • 1988</p>
+        <button ion-button clear item-end>View</button>
+      </ion-item>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/img/water.jpg">
+        </ion-avatar>
+        <h2>My Neighbor Totoro</h2>
+        <p>Hayao Miyazaki • 1988</p>
+        <button ion-button clear item-end>View</button>
+      </ion-item>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/img/water.jpg">
+        </ion-avatar>
+        <h2>My Neighbor Totoro</h2>
+        <p>Hayao Miyazaki • 1988</p>
+        <button ion-button clear item-end>View</button>
+      </ion-item>
+    </ion-list>
 </ion-content>

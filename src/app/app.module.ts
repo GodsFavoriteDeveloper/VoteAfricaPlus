@@ -6,6 +6,8 @@ import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ChatProvider } from '../providers/chat/chat';
+import { HttpClientModule } from '@angular/common/http'
+import { DataProvider } from '../providers/data/data';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,8 @@ import { ChatProvider } from '../providers/chat/chat';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -23,7 +26,8 @@ import { ChatProvider } from '../providers/chat/chat';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ChatProvider
+    ChatProvider,
+    DataProvider
   ]
 })
 export class AppModule {}
