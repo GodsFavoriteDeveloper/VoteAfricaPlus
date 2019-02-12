@@ -20,4 +20,16 @@ export class OfficialsPage {
     })
   }
 
+  navigate(){
+    this.navCtrl.push('OfficialPage')
+  }
+
+  seeAll(){
+    this.navCtrl.push('OfficialsListPage')
+  }
+
+  search(){
+    this.navCtrl.push('SearchPage')
+  }
+
 }

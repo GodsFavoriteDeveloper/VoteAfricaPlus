@@ -1,63 +1,68 @@
 <ion-header>
-  <ion-navbar color="headerBG">
-    <ion-title>Officials</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>Elected Officials</ion-title>
+    <ion-buttons end>
+        <button (click)="search()" ion-button icon-only>
+          <ion-icon name="search"></ion-icon>
+        </button>
+      </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-slides spaceBetween="3" slidesPerView="1.2" pager="false">
-    <ion-slide>
-      <ion-card class="poster" [style.backgroundImage]="'url(assets/img/election.jpg)'">
+  <!-- <ion-slides spaceBetween="3" slidesPerView="1.2" pager="false">
+    <ion-slide (click)="navigate()">
+      <ion-card class="poster" [style.backgroundImage]="'url(https://ocdn.eu/pulscms-transforms/1/fTwktkpTURBXy81ODcxYWYyMzYwOGFlNzhmZWM0NzRlMTY5MzdkOWUzYy5qcGeSlQMAAM0FAM0C0JMFzQMUzQG8)'">
         <div (click)="navigate()" class="boxf">President Buhari</div>
     </ion-card>
     </ion-slide>
 
     <ion-slide>
-      <ion-card class="poster" [style.backgroundImage]="'url(assets/img/water.jpg)'">
-        <div (click)="navigate()" class="boxf">Next Elections</div>
+      <ion-card class="poster" [style.backgroundImage]="'url(https://i0.wp.com/pmparrotng.com/wp-content/uploads/2017/07/Yemi-Osinbajo-1.jpg)'">
+        <div (click)="navigate()" class="boxf">VP Yemi Osinbajo</div>
     </ion-card>
     </ion-slide>
 
     <ion-slide>
-      <ion-card class="poster" [style.backgroundImage]="'url(assets/img/election.jpg)'">
-        <div (click)="navigate()" class="boxf">Vote Africa Plus</div>
+      <ion-card class="poster" [style.backgroundImage]="'url(https://i2.wp.com/media.premiumtimesng.com/wp-content/files/2015/12/Ike-Ekweremadu.jpg)'">
+        <div (click)="navigate()" class="boxf">VP Ike Ekweremadu</div>
     </ion-card>
     </ion-slide>
     
-  </ion-slides>
+  </ion-slides> -->
 
     <ion-row class="row">
       <ion-col class="col" col-9="">
-          <p class="tops">My Feed</p>
+          <p class="tops">Presidential</p>
       </ion-col>
-      <ion-col class="col" col-3="">
-          <p class="tops">See All</p>
+      <ion-col (click)="seeAll()" class="col" col-3="">
+          <p item-end class="tops">See All</p>
       </ion-col>
     </ion-row>
 
 
     <ion-slides spaceBetween="3" slidesPerView="4.2" pager="false">
-        <ion-slide>
+        <ion-slide (click)="navigate()">
           <ion-card class="poster-card" [style.backgroundImage]="'url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Muhammadu_Buhari%2C_President_of_the_Federal_Republic_of_Nigeria_%28cropped%29.jpg/230px-Muhammadu_Buhari%2C_President_of_the_Federal_Republic_of_Nigeria_%28cropped%29.jpg)'">
         </ion-card>
         </ion-slide>
     
-        <ion-slide>
-          <ion-card class="poster-card" [style.backgroundImage]="'url(https://i2.wp.com/pmparrotng.com/wp-content/uploads/2018/11/Professor-Yemi-Osinbajo.jpg?fit=640%2C394&ssl=1)'">
+        <ion-slide (click)="navigate()">
+          <ion-card class="poster-card" [style.backgroundImage]="'url(assets/img/yemi.jpg)'">
         </ion-card>
         </ion-slide>
     
-        <ion-slide>
-          <ion-card class="poster-card" [style.backgroundImage]="'url(assets/img/election.jpg)'">
+        <ion-slide (click)="navigate()">
+          <ion-card class="poster-card" [style.backgroundImage]="'url(https://guardian.ng/wp-content/uploads/2016/11/Speaker-Dogara.jpg)'">
         </ion-card>
         </ion-slide>
 
-        <ion-slide>
+        <ion-slide (click)="navigate()">
           <ion-card class="poster-card" [style.backgroundImage]="'url(assets/img/water.jpg)'">
         </ion-card>
         </ion-slide>
         
-        <ion-slide>
+        <ion-slide (click)="navigate()">
           <ion-card class="poster-card" [style.backgroundImage]="'url(assets/img/election.jpg)'">
         </ion-card>
         </ion-slide>
@@ -67,7 +72,7 @@
 
     <ion-row class="row">
       <ion-col class="col" col-9="">
-          <p class="tops">My Feed</p>
+          <p class="tops">Parliamentary</p>
       </ion-col>
       <ion-col class="col" col-3="">
           <p class="tops">See All</p>
@@ -102,4 +107,35 @@
         </ion-slide>
       </ion-slides>
 
+      <ion-row class="row">
+        <ion-col class="col" col-9="">
+            <p class="tops">Trending Officials</p>
+        </ion-col>
+        <ion-col class="col" col-3="">
+            <p class="tops">See All</p>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/img/yemi.jpg">
+        </ion-avatar>
+        <h2>President Buhari</h2>
+        <button item-end ion-button color="danger">Follow</button>
+      </ion-item>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/img/yemi.jpg">
+        </ion-avatar>
+        <h2>President Buhari</h2>
+        <button item-end ion-button color="danger">Follow</button>
+      </ion-item>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/img/yemi.jpg">
+        </ion-avatar>
+        <h2>President Buhari</h2>
+        <button item-end ion-button color="danger">Follow</button>
+      </ion-item>
 </ion-content>

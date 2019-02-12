@@ -8,8 +8,8 @@ import { IonicPage } from 'ionic-angular';
   templateUrl: 'tabs.html',
 })
 export class TabsPage {
-  tab1Root = 'OfficialsPage';
-  tab2Root = 'LearnPage';
+  tab1Root = 'LearnPage';
+  tab2Root = 'OfficialsPage';
   tab3Root = 'ChatPage';
   tab4Root = 'ProfilePage'
 

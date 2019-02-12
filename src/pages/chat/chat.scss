@@ -79,7 +79,7 @@ page-chat {
         background: transparent !important;
     }
     .toolbar-title {
-        color: #444 !important;
+        color: #fff !important;
     }
 
     .bar-footer {
@@ -314,7 +314,7 @@ ion-content {
   height: 0px !important;
 }
 ion-navbar.toolbar {
-  background: #ffffff !important;
+  background: color($colors, primary) !important;
 }
 
 }
