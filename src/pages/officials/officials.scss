@@ -51,4 +51,10 @@ page-officials {
     p.tops {
         line-height: 0.1 !important;
     }
+    .item-block .item-inner {
+        padding-right: 0px !important;
+    }
+    .item {
+        padding-left: 10px;
+    }
 }
