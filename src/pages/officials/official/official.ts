@@ -67,8 +67,8 @@ export class OfficialPage {
   }
 
 
-  navigate(a){
-    this.navCtrl.push('OfficialInfoPage', {officialData: a})
+  navigate(a, b){
+    this.navCtrl.push(a, {officialData: b})
   }
 
 }
