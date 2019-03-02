@@ -1,3 +1,17 @@
 page-post {
-
+    .scroll-content {
+        margin-top: 0px !important;
+    }
+    .toolbar-background-md {
+        background: transparent !important;
+    }
+    ion-title {
+        display: none !important;
+    }
+    h2 {
+        font-size: 1.6rem !important;
+    }
+    .item-md h2 {
+        font-weight: 600 !important;
+    }
 }

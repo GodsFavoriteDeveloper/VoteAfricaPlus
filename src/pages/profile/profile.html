@@ -5,13 +5,17 @@
 </ion-header>
 
 <ion-content>
+    <div class="profile">
+      <img [src]="avatar" alt="">
+      <p>Entrepreneur/Software Developer</p>
+    </div>
     <ion-row class="row">
         <ion-col class="col" col-9="">
             <p class="tops">You Are Following</p>
         </ion-col>
       </ion-row>
-
-    <ion-slides spaceBetween="3" slidesPerView="4.2" pager="false">
+      
+    <ion-slides spaceBetween="5" slidesPerView="4.2" pager="false">
       <ion-slide *ngFor="let favorite of favoriteOfficials" (click)="navigate(favorite)">
         <ion-card class="poster-card" [style.backgroundImage]="'url(' + favorite.thumb + ')'">
       </ion-card>

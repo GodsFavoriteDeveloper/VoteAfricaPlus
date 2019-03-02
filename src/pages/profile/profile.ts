@@ -12,13 +12,14 @@ import { Storage } from '@ionic/storage';
 
 export class ProfilePage {
   favoriteOfficials: any;
+  avatar: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public data: DataProvider, public storage: Storage) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfilePage');
-    
+    this.avatar = "assets/img/buhari_thumb.jpg";
   }
 
   ionViewWillEnter(){
