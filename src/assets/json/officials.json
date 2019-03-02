@@ -1,5 +1,6 @@
 [
     {
+        "id": 0,
         "name": "Muhammadu Buhari",
         "tag": "president-buhari",
         "position": "President of Nigeria",
@@ -25,9 +26,10 @@
         ]  
     },
     {
-        "name": "President M Buhari",
-        "tag": "buhari",
-        "position": "President",
+        "id": 1,
+        "name": "Yemi Osinbajo",
+        "tag": "yemi",
+        "position": "Vice President Of Nigeria",
         "party": "lorem ipsum",
         "thumb": "assets/img/yemi.jpg",
         "cover": "assets/img/yemi_cover.jpg",
@@ -54,8 +56,9 @@
         ]  
     },
     {
-        "name": "President M Buhari",
-        "tag": "buhari",
+        "id": 2,
+        "name": "President M Buhari1",
+        "tag": "buhari1",
         "position": "President",
         "party": "lorem ipsum",
         "thumb": "assets/img/yemi.jpg",
@@ -83,8 +86,9 @@
         ]  
     },
     {
-        "name": "President M Buhari",
-        "tag": "buhari",
+        "id": 3,
+        "name": "President M Buhari2",
+        "tag": "buhari2",
         "position": "President",
         "party": "lorem ipsum",
         "thumb": "assets/img/yemi.jpg",
@@ -112,8 +116,9 @@
         ]  
     },
     {
-        "name": "President M Buhari",
-        "tag": "buhari",
+        "id": 4,
+        "name": "President M Buhari3",
+        "tag": "buhari3",
         "position": "President",
         "party": "lorem ipsum",
         "thumb": "assets/img/yemi.jpg",

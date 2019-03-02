@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { DataProvider } from '../../../providers/data/data';
+import { Storage } from '@ionic/storage';
 
 
 @IonicPage()
@@ -11,10 +12,10 @@ import { DataProvider } from '../../../providers/data/data';
 export class OfficialPage {
   official: any = "about";
   data: any;
-  isFollowing: boolean = false;
   posts: any;
+  favoriteOfficials: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public dataProvider: DataProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public dataProvider: DataProvider, public storage: Storage) {
     this.data = this.navParams.get('data');
     console.log(this.data)
   }
@@ -23,16 +24,31 @@ export class OfficialPage {
     console.log('ionViewDidLoad OfficialPage');
   }
 
-  follow(data){
-    if(this.isFollowing == false){
-      this.isFollowing = true;
+  ionViewWillEnter(){
+    this.storage.get('officials').then((data)=>{
+      console.log(data)
+      this.favoriteOfficials = data;
+    })
+  }
 
-    } else {
-      this.isFollowing = false
-    }
-
+  addToFavorites(data){
     this.dataProvider.addOfficialToFavorite(data)
-  
+  }
+
+  removeFromFavorites(data){
+    this.dataProvider.removeOfficialFromFavorites(data);
+  }
+
+  isFavorite(data){
+    if(this.favoriteOfficials){
+      return this.favoriteOfficials.find((officialEl)=>{
+        console.log(officialEl.id + "  " + data.id)
+        return officialEl.id == data.id
+      })
+    }else {
+      return false
+    }
+    
   }
 
   loadArticles(a){

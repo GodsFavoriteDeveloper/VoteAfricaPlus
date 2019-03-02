@@ -1,6 +1,11 @@
 <ion-header>
   <ion-navbar color="light">
     <ion-title>Learn</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="tutorial()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -64,5 +69,9 @@
       <p>Media Resources For Voters</p>
     </ion-item>
   </ion-card>
+
+  <ion-fab right bottom>
+    <button ion-fab color="primary"><ion-icon name="information"></ion-icon></button>
+  </ion-fab>
 
 </ion-content>

@@ -34,15 +34,31 @@ export class DataProvider {
   }
 
   removeOfficialFromFavorites(official){
-    const position = this.favoriteOfficials.findIndex((officialEl)=>{
-      return officialEl.tag == official.tag;
-    })
-    this.favoriteOfficials.splice(position, 1)
+    this.storage.get('officials').then((data)=>{
+      console.log(data);
+      const position = data.findIndex((officialEl)=>{
+        return officialEl.id == official.id;
+      })
+      console.log(position)
+      this.favoriteOfficials = data.splice(position, 1);
+      this.storage.remove('officials');
+      this.storage.set('officials', this.favoriteOfficials).then((data)=>{
+        console.log(data);
+      });
+    });
+    
   }
 
   getFavoriteOfficials(){
-    
     return this.favoriteOfficials.splice()
+  }
+
+  isFavoriteOfficial(official){
+    this.storage.get('officials').then((data)=>{     
+    })
+    return this.favoriteOfficials.find((officialEl)=>{
+      return officialEl.id == official.id
+    })
   }
 
 }

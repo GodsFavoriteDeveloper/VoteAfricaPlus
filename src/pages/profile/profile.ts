@@ -9,6 +9,7 @@ import { Storage } from '@ionic/storage';
   selector: 'page-profile',
   templateUrl: 'profile.html',
 })
+
 export class ProfilePage {
   favoriteOfficials: any;
 
@@ -24,6 +25,12 @@ export class ProfilePage {
     this.storage.get('officials').then((data)=>{
       console.log(data)
       this.favoriteOfficials = data;
+    })
+  }
+
+  navigate(a){
+    this.navCtrl.push('OfficialPage', {
+      data: a
     })
   }
 
