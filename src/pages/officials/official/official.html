@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Official</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="twPc-div">
+        <a [style.backgroundImage]="'url('+ data.cover +')'" class="twPc-bg twPc-block"></a>
+    
+      <div>
+        <div class="twPc-button">
+                <button small (click)="follow()" ion-button [style.background-color]="isFollowing ? '#209485' : '#f53d3d'">{{isFollowing ? 'Unfollow' : 'Follow'}}</button>
+        </div>
+    
+        <a title="Mert S. Kaplan" href="https://twitter.com/mertskaplan" class="twPc-avatarLink">
+          <img [src]="data.thumb" class="twPc-avatarImg">
+        </a>
+    
+        <div class="twPc-divUser">
+          <div class="twPc-divName">
+            <a>{{data.name}}</a>
+          </div>
+          <span>
+            <a><span>{{data.position}}</span></a>
+          </span>
+        </div>
+    
+        <div class="twPc-divStats">
+          <ul class="twPc-Arrange">
+            <li class="twPc-ArrangeSizeFit">
+              <a>
+                <span class="twPc-StatLabel twPc-block">Days In Office</span>
+                <span class="twPc-StatValue">{{data.daysInOffice}}</span>
+              </a>
+            </li>
+            <li class="twPc-ArrangeSizeFit">
+              <a>
+                <span class="twPc-StatLabel twPc-block">Promises Made</span>
+                <span class="twPc-StatValue">{{data.promisesMade}}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div>
+        <ion-segment [(ngModel)]="official">
+          <ion-segment-button value="about">
+            About
+          </ion-segment-button>
+          <ion-segment-button value="feed" (ionSelect)="loadArticles(data.tag)">
+            Feed
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+      
+      <div [ngSwitch]="official">
+        <ion-list *ngSwitchCase="'about'">
+          <ion-card>
+            <ion-item (click)="navigate(data.background)">
+              <ion-icon name="person" item-start></ion-icon>
+              <h2>Background</h2>
+            </ion-item>
+          </ion-card>  
+          <ion-card>  
+            <ion-item (click)="navigate(data.promises)">
+              <ion-icon name="clipboard" item-start></ion-icon>
+              <h2>Promises Made</h2>
+              <ion-badge item-end>{{data.promisesMade}}</ion-badge>
+            </ion-item>
+          </ion-card>  
+          <ion-card>  
+            <ion-item (click)="navigate(data.duties)">
+              <ion-icon (click)="navigate(data.duties)" name="briefcase" item-start></ion-icon>
+              <h2>Role & Duties</h2>
+            </ion-item>
+          </ion-card>
+        </ion-list>
+      
+        <ion-list *ngSwitchCase="'feed'">
+          <ion-list>
+            <ion-item *ngFor="let post of posts">
+              <ion-avatar item-start>
+                <img [src]="post.thumbnail">
+              </ion-avatar>
+              <h2 [innerHTML]="post.title"></h2>
+              <p [innerHTML]="post.excerpt"></p>
+            </ion-item>
+          </ion-list>
+        </ion-list>
+      </div>
+</ion-content>

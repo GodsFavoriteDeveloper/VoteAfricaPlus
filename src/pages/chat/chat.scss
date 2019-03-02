@@ -75,12 +75,6 @@ page-chat {
     .text-input{
         font-size: 1.4rem;
     }
-    .toolbar-background {
-        background: transparent !important;
-    }
-    .toolbar-title {
-        color: #fff !important;
-    }
 
     .bar-footer {
         overflow: visible !important;
@@ -105,16 +99,20 @@ page-chat {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    position: absolute;
+    border-radius: 10% !important;
     bottom: 10px;
+    margin-top: 10px;
+    margin-left: 5px;
     }
 
     img.profile-pic.left {
     left: 10px;
+    float: left;
     }
 
     img.profile-pic.right {
     right: 10px;
+    float: right
     }
 
     .ion-email {
@@ -313,8 +311,6 @@ ion-content {
 .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
   height: 0px !important;
 }
-ion-navbar.toolbar {
-  background: color($colors, primary) !important;
-}
+
 
 }

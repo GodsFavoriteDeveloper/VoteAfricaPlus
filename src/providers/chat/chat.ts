@@ -29,11 +29,12 @@ export class ChatProvider {
     return this.client.textRequest(msg)
                .then(res => {
                   const speech = res.result.fulfillment.speech;
+                  console.log(speech)
                   const botMessage = new Message(speech, 'bot');
                   this.update(botMessage);
                   this.events.publish('hello', 'Norman')
                }).catch((error)=>{
-                console.error(error)
+                console.dir(error)
                });
   }
 

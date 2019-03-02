@@ -1,17 +1,144 @@
 [
     {
-        "name": "President Buhari"
+        "name": "Muhammadu Buhari",
+        "tag": "president-buhari",
+        "position": "President of Nigeria",
+        "party": "lorem ipsum",
+        "thumb": "assets/img/buhari_thumb.jpg",
+        "cover": "assets/img/buhari_cover.jpg",
+        "daysInOffice": "10",
+        "promisesMade": 81,
+        "background": "<p>Muhammadu Buhari GCFR (born 17 December 1942) is a Nigerian politician currently serving as the President of Nigeria, in office since 2015. He is a retired major general in the Nigerian Army and previously served as the nation's head of state from 31 December 1983 to 27 August 1985, after taking power in a military coup d'état. The term Buharism is ascribed to the Buhari military government</p><p>He unsuccessfully ran for the office of president of Nigeria in the 2003, 2007, and 2011 general elections. In December 2014, he emerged as the presidential candidate of the All Progressives Congress for the March 2015 general elections. Buhari won the election, defeating the incumbent President Goodluck Jonathan. This marked the first time in the history of Nigeria that an incumbent president lost to an opposition candidate in a general election. He was sworn in on 29 May 2015.</p><p>Buhari has stated that he takes responsibility for anything over which he presided during his military rule, and that he cannot change the past. He has described himself as a 'converted democrat'.</p>",
+        "duties": "",
+        "promises": "<ol><li>Public declaration of assets and liabilities</li><li>State and community policing</li><li>Ban on all government officials from seeking medical care abroad</li></ol>",
+        "gallery": [
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"}
+        ]  
     },
     {
-        "name": "President Buhari"
+        "name": "President M Buhari",
+        "tag": "buhari",
+        "position": "President",
+        "party": "lorem ipsum",
+        "thumb": "assets/img/yemi.jpg",
+        "cover": "assets/img/yemi_cover.jpg",
+        "daysInOffice": "16",
+        "promisesMade": 81,
+        "background": "lorem ipsum",
+        "duties": "",
+        "promises": [
+            {"name": "Lets get one thing done"},
+            {"name": "Lets get two things done"},
+            {"name": "Lets get three things done"}
+        ],
+        "gallery": [
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"}
+        ]  
     },
     {
-        "name": "President Buhari"
+        "name": "President M Buhari",
+        "tag": "buhari",
+        "position": "President",
+        "party": "lorem ipsum",
+        "thumb": "assets/img/yemi.jpg",
+        "cover": "assets/img/buhari_cover.jpg",
+        "daysInOffice": "10",
+        "promisesMade": 81,
+        "background": "lorem ipsum",
+        "duties": "",
+        "promises": [
+            {"name": "Lets get one thing done"},
+            {"name": "Lets get two things done"},
+            {"name": "Lets get three things done"}
+        ],
+        "gallery": [
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"}
+        ]  
     },
     {
-        "name": "President Buhari"
+        "name": "President M Buhari",
+        "tag": "buhari",
+        "position": "President",
+        "party": "lorem ipsum",
+        "thumb": "assets/img/yemi.jpg",
+        "cover": "assets/img/buhari_cover.jpg",
+        "daysInOffice": "10",
+        "promisesMade": 81,
+        "background": "lorem ipsum",
+        "duties": "",
+        "promises": [
+            {"name": "Lets get one thing done"},
+            {"name": "Lets get two things done"},
+            {"name": "Lets get three things done"}
+        ],
+        "gallery": [
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"}
+        ]  
     },
     {
-        "name": "President Buhari"
+        "name": "President M Buhari",
+        "tag": "buhari",
+        "position": "President",
+        "party": "lorem ipsum",
+        "thumb": "assets/img/yemi.jpg",
+        "cover": "assets/img/buhari_cover.jpg",
+        "daysInOffice": "10",
+        "promisesMade": 81,
+        "background": "lorem ipsum",
+        "duties": "",
+        "promises": [
+            {"name": "Lets get one thing done"},
+            {"name": "Lets get two things done"},
+            {"name": "Lets get three things done"}
+        ],
+        "gallery": [
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"},
+            {"img" : "assets/img/officials/buhari.jpg"}
+        ]  
     }
+    
 ]

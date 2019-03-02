@@ -9,19 +9,36 @@ import { DataProvider } from '../../providers/data/data';
   templateUrl: 'officials.html',
 })
 export class OfficialsPage {
+  isFollowing: boolean = false;
+  posts: any;
+  pages: any = "officials";
+  searchEnabled: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public data: DataProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad OfficialsPage');
+    this.loadData()
+  }
+
+  loadData(){
     this.data.getOfficials().subscribe((data)=>{
-      console.log(data)
+      console.log(data);
+      this.posts = data;
+    }, (error)=>{
+      console.log(error)
     })
   }
 
-  navigate(){
-    this.navCtrl.push('OfficialPage')
+  navigate(a){
+    this.navCtrl.push('OfficialPage', {
+      data: a
+    })
+  }
+
+  async selectSegment(a){
+    this.searchEnabled = a;
   }
 
   seeAll(){
@@ -30,6 +47,16 @@ export class OfficialsPage {
 
   search(){
     this.navCtrl.push('SearchPage')
+  }
+
+  follow(){
+    if(this.isFollowing == false){
+      this.isFollowing = true;
+
+    } else {
+      this.isFollowing = false
+    }
+  
   }
 
 }

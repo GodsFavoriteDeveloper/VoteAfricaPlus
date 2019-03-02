@@ -57,4 +57,16 @@ page-officials {
     .item {
         padding-left: 10px;
     }
+    .item-md h2 {
+        font-size: 1.4rem !important;
+        font-weight: bold !important;
+    }
+    .item-md p {
+        font-size: 1.2rem !important;
+    }
+    .segment-button {
+        color: color($colors, primary) !important;
+        font-weight: 600 !important;
+        border-bottom-width: 3px !important;
+    }
 }

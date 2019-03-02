@@ -1,18 +1,26 @@
 page-official {
+    .scroll-content {
+        margin-top: 0px !important;
+    }
+    .toolbar-md-primary .toolbar-background-md {
+        background: transparent !important;
+    }
+    ion-title {
+        display: none !important;
+    }
     .twPc-div {
         background: #fff none repeat scroll 0 0;
-        border: 1px solid #e1e8ed;
+        border: 0px solid #e1e8ed;
         border-radius: 6px;
-        height: 200px;
-        max-width: 340px; // orginal twitter width: 290px;
+        height: 270px;
+        max-width: 100%;
     }
     .twPc-bg {
-        background-image: url("https://i1.wp.com/media.premiumtimesng.com/wp-content/files/2018/11/President-Muhammadu-Buhari.jpg");
         background-position: 0 50%;
         background-size: 100% auto;
         border-bottom: 1px solid #e1e8ed;
         border-radius: 4px 4px 0 0;
-        height: 95px;
+        height: 165px;
         width: 100%;
     }
     .twPc-block {
@@ -105,5 +113,15 @@ page-official {
     }
     ion-avatar img {
         border-radius: 5px !important;
+    }
+    ion-content {
+        background: #ebecec !important;
+    }
+    .item-md h2 {
+        font-size: 1.4rem !important;
+        font-weight: bold !important;
+    }
+    .item-md p {
+        font-size: 1.2rem !important;
     }
 }
