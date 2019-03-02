@@ -38,29 +38,16 @@
       </ion-col>
     </ion-row>
     <ion-list>
-      <ion-item>
+      <ion-item *ngFor="let favorite of favoriteOfficials">
         <ion-avatar item-start>
-          <img src="assets/img/water.jpg">
+          <img [src]="favorite.thumb">
         </ion-avatar>
-        <h2>My Neighbor Totoro</h2>
-        <p>Hayao Miyazaki • 1988</p>
-        <button ion-button clear item-end>View</button>
-      </ion-item>
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="assets/img/water.jpg">
-        </ion-avatar>
-        <h2>My Neighbor Totoro</h2>
-        <p>Hayao Miyazaki • 1988</p>
-        <button ion-button clear item-end>View</button>
-      </ion-item>
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="assets/img/water.jpg">
-        </ion-avatar>
-        <h2>My Neighbor Totoro</h2>
-        <p>Hayao Miyazaki • 1988</p>
+        <h2>{{favorite.name}}</h2>
+        <p>{{favorite.position}}</p>
         <button ion-button clear item-end>View</button>
       </ion-item>
     </ion-list>
+
+
+    <div>{{favoriteOfficials}}</div>
 </ion-content>

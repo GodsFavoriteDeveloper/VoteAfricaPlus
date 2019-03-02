@@ -23,13 +23,15 @@ export class OfficialPage {
     console.log('ionViewDidLoad OfficialPage');
   }
 
-  follow(){
+  follow(data){
     if(this.isFollowing == false){
       this.isFollowing = true;
 
     } else {
       this.isFollowing = false
     }
+
+    this.dataProvider.addOfficialToFavorite(data)
   
   }
 
