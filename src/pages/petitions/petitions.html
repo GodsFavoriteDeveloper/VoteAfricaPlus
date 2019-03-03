@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="clean">
+    <ion-title>Petitions</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-card *ngFor="let item of items" (click)="navigateToTab(1)">
+        <ion-item-sliding>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="http://www.grayston.co.za/wp-content/uploads/2018/08/Lokuthula-Lodges-73_ss20635.jpg">
+            </ion-avatar>
+            <h2>Support urgent reforms to ensure Zimbabwe's 2018 Elections will be Free, Fair and Credible</h2>
+            <p>Zimbabwe is a country that has seen an estimated 40% of its population migrate due to economic</p>
+        </ion-item>
+        <ion-item-options side="right">
+        <button ion-button color="primary">
+          <ion-icon name="mail"></ion-icon>
+          Email
+        </button>
+      </ion-item-options>
+        </ion-item-sliding>
+        
+      </ion-card>
+
+</ion-content>

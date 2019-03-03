@@ -10,7 +10,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-card (click)="navigateToPage('')">
+  <ion-card (click)="navigateToPage('YourVotePage')">
     <ion-item>
       <ion-avatar item-start>
         <img src="assets/icon/voting.png">
@@ -30,13 +30,13 @@
     </ion-item>
   </ion-card>
 
-  <ion-card (click)="navigateToPage('StatsPage')">
+  <ion-card (click)="navigateToPage('PetitionsPage')">
     <ion-item>
       <ion-avatar item-start>
-        <img src="assets/icon/team.png">
+        <img src="assets/icon/petition.png">
       </ion-avatar>
-      <h2>2019 Election Stats</h2>
-      <p>Were you a part of the action?</p>
+      <h2>Find Petitions</h2>
+      <p>Search and submit petitions</p>
     </ion-item>
   </ion-card>
 
@@ -49,6 +49,16 @@
       <p>Your personal election guide</p>
     </ion-item>
   </ion-card>
+
+  <ion-card (click)="navigateToPage('StatsPage')">
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/icon/stats.png">
+        </ion-avatar>
+        <h2>2019 Election Stats</h2>
+        <p>Were you a part of the action?</p>
+      </ion-item>
+    </ion-card>
 
   
 

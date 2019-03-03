@@ -1,4 +1,4 @@
-page-post {
+page-your-vote {
     .scroll-content {
         margin-top: 0px !important;
     }
@@ -8,13 +8,7 @@ page-post {
     ion-title {
         display: none !important;
     }
-    h2 {
-        font-size: 1.6rem !important;
-    }
-    .item-md h2 {
-        font-weight: 600 !important;
-    }
-    p:first-child:first-letter {
+    .firstcharacter {
         color: #209485;
         float: left;
         font-family: Georgia;

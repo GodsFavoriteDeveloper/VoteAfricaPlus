@@ -12,5 +12,10 @@
     </ion-item>
       
     <p style="padding: 0 15px" [innerHTML]="postData?.content"></p>
+
+    <ion-fab top right edge>
+      <button (click)="share()" ion-fab mini><ion-icon name="share"></ion-icon></button>
+    </ion-fab>
+  
   
 </ion-content>
