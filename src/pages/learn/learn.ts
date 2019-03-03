@@ -20,4 +20,12 @@ export class LearnPage {
     this.app.getRootNav().setRoot('TutorialPage');
   }
 
+  navigateToPage(a){
+    this.navCtrl.push(a)
+  }
+
+  navigateToTab(a){
+    this.navCtrl.parent.select(a);
+  }
+
 }

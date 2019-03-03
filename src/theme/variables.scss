@@ -36,7 +36,10 @@ $colors: (
   primary:    #209485,
   secondary:  #5f7a8a,
   darkGreen:  rgb(23, 105, 92),
-  clean:      #ffffff,
+  clean:      (
+    base: #ffffff,
+    contrast: #444
+  ),
   danger:     #f53d3d,
   light:      (
     base: #ffffff,

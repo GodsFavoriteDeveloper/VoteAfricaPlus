@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { DataProvider } from '../../../providers/data/data';
 import { Storage } from '@ionic/storage';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 
 @IonicPage()
@@ -15,7 +16,7 @@ export class OfficialPage {
   posts: any;
   favoriteOfficials: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public dataProvider: DataProvider, public storage: Storage) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public dataProvider: DataProvider, public storage: Storage, private socialSharing: SocialSharing) {
     this.data = this.navParams.get('data');
     console.log(this.data)
   }
@@ -74,6 +75,18 @@ export class OfficialPage {
 
   navigate(a, b){
     this.navCtrl.push(a, {officialData: b})
+  }
+
+  share(a, b, c, d){
+    let url = 'https://play.google.com/store/apps/details?id=io.initsolutions.vote';
+    let message = 'Follow and track progress of ' + this.data.name + ' and other elected officials on Vote Africa Mobile app available on Android and iOS';
+    console.log(message)
+    // Share
+    this.socialSharing.share(message, "Download Vote Africa Today", this.data.thumb, url).then(() => {
+      // Success!
+    }).catch(() => {
+      // Error!
+    });
   }
 
 }
