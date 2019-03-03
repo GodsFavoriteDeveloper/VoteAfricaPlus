@@ -62,23 +62,27 @@
       <div [ngSwitch]="official">
         <ion-list *ngSwitchCase="'about'">
           <ion-card>
-            <ion-item (click)="navigate('OfficialInfoPage', data.background)">
-              <ion-icon name="person" item-start></ion-icon>
-              <h2>Background</h2>
-            </ion-item>
-          </ion-card>  
-          <ion-card>  
-            <ion-item (click)="navigate('OfficialInfoPage', data.promises)">
-              <ion-icon name="clipboard" item-start></ion-icon>
-              <h2>Promises Made</h2>
-              <ion-badge item-end>{{data.promisesMade}}</ion-badge>
-            </ion-item>
-          </ion-card>  
-          <ion-card>  
-            <ion-item (click)="navigate('OfficialInfoPage', data.duties)">
-              <ion-icon (click)="navigate(data.duties)" name="briefcase" item-start></ion-icon>
-              <h2>Role & Duties</h2>
-            </ion-item>
+            <ion-list>
+                <button detail-push lines="full" ion-item (click)="navigate('OfficialInfoPage', data.background)">
+                    <ion-icon name="person" item-start></ion-icon>
+                    <h2>Background</h2>
+                    <ion-icon small name="ios-arrow-forward" item-end></ion-icon>
+                  </button>
+         
+                  <button ion-item (click)="navigate('OfficialInfoPage', data.promises)">
+                    <ion-icon name="clipboard" item-start></ion-icon>
+                    <h2>Promises Made</h2>
+                    <ion-badge item-end>{{data.promisesMade}}</ion-badge>
+                  </button>
+      
+       
+                  <button ion-item (click)="navigate('OfficialInfoPage', data.duties)">
+                    <ion-icon (click)="navigate(data.duties)" name="briefcase" item-start></ion-icon>
+                    <h2>Role & Duties</h2>
+                    <ion-icon small name="ios-arrow-forward" item-end></ion-icon>
+                  </button>
+            </ion-list>
+            
           </ion-card>
         </ion-list>
       

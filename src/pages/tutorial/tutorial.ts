@@ -22,6 +22,10 @@ export class TutorialPage {
     })
   }
 
+  navigateToTab(a){
+    this.navCtrl.push('TabsPage');
+  }
+
   onSlideChangeStart(slider: Slides) {
     this.showSkip = !slider.isEnd();
   }
