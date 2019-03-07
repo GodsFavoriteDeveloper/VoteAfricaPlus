@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="clean">
+    <ion-title>Submit Petition</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="wrapper">
+      <div class="petImage" (click)="uploadImage()">
+        <img width="40px" height="40px" src="assets/icon/petition.png" alt="">
+      </div>
+  </div>
+
+    <ion-card>
+      <ion-input type="text" placeholder="Enter Your Name"></ion-input>
+    </ion-card>
+
+    <ion-card>
+      <ion-textarea type="text" placeholder="Enter Long Description"></ion-textarea>
+    </ion-card>
+
+    <div class="petButton">
+      <button ion-button block color="primary">Submit</button>
+    </div>
+
+  
+
+</ion-content>

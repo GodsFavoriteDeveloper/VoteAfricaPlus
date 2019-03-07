@@ -17,4 +17,12 @@ export class PetitionsPage {
     console.log('ionViewDidLoad PetitionsPage');
   }
 
+  submitPetition(){
+    this.navCtrl.push('SubmitPetitionPage')
+  }
+
+  navigate(){
+    this.navCtrl.push('PetitionPage')
+  }
+
 }

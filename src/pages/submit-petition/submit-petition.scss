@@ -1,0 +1,30 @@
+page-submit-petition {
+    ion-content {
+        background: #eeeeee !important;
+    }
+    .wrapper {
+        padding: 5px 10px 0 10px
+    }
+    .petImage {
+        width: 100%;
+        height: 150px !important;
+        background-color: #ffffff !important;
+        border: 2px dashed rgb(99, 97, 97);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    }
+    .petButton {
+        padding: 0 10px
+    }
+    .button-md {
+        height: 4rem !important;
+    }
+    .button-ios {
+        height: 4rem !important;
+    }
+
+    
+}
