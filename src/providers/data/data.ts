@@ -39,7 +39,7 @@ export class DataProvider {
       const position = data.findIndex((officialEl)=>{
         return officialEl.id == official.id;
       })
-      console.log(position)
+      console.log(position + " is the current position after deletion")
       this.favoriteOfficials = data.splice(position, 1);
       this.storage.remove('officials');
       this.storage.set('officials', this.favoriteOfficials).then((data)=>{

@@ -6,8 +6,8 @@
 
 <ion-content>
 
-    <ion-card *ngFor="let item of items" (click)="navigate()">
-        <ion-item-sliding>
+    <ion-card *ngFor="let item of items">
+        <ion-item-sliding (click)="navigate()">
           <ion-item>
             <ion-avatar item-start>
               <img src="http://www.grayston.co.za/wp-content/uploads/2018/08/Lokuthula-Lodges-73_ss20635.jpg">

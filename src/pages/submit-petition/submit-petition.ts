@@ -9,7 +9,7 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
   templateUrl: 'submit-petition.html',
 })
 export class SubmitPetitionPage {
-  petImage: any;
+  petImage: any = "No Image Submitted";
   petTitle: any;
   petBody: any;
 

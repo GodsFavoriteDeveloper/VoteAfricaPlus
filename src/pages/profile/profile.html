@@ -13,14 +13,21 @@
         <ion-col class="col" col-9="">
             <p class="tops">You Are Following</p>
         </ion-col>
+        <ion-col text-right class="col" col-3="">
+            <p style="color: red" (click)="clearFavs()" class="tops">Clear</p>
+        </ion-col>
       </ion-row>
-      
-    <ion-slides spaceBetween="5" slidesPerView="4.2" pager="false">
-      <ion-slide *ngFor="let favorite of favoriteOfficials" (click)="navigate(favorite)">
-        <ion-card class="poster-card" [style.backgroundImage]="'url(' + favorite.thumb + ')'">
-      </ion-card>
-      </ion-slide>
-    </ion-slides>
+    
+
+    <div class="wrapd">
+      <ion-slides spaceBetween="7" slidesPerView="4.2" pager="false">
+        <ion-slide *ngFor="let favorite of favoriteOfficials" (click)="navigate(favorite)">
+          <ion-card class="poster-card" [style.backgroundImage]="'url(' + favorite.thumb + ')'">
+        </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </div>
+    
 
 
     <ion-row class="row">
