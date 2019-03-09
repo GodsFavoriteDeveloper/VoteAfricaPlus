@@ -9,7 +9,7 @@
 <ion-content>
     <div class="message-wrapper">
         <div>
-          <img class="profile-pic left" src="assets/img/water.jpg" />
+          <img class="profile-pic left" src="assets/img/logo.png" />
           <!--  wave-->
           <div class="chat-bubble left slide-left">
     
@@ -27,7 +27,7 @@
 
     <div *ngFor="let message of messages | async" class="message-wrapper">
         <div *ngIf="message.sentBy === 'bot'">
-          <img class="profile-pic left" src="https://clueberryworld.org/wp-content/peepso/users/34/6d3d5e8cd9-avatar-full.jpg" />
+          <img class="profile-pic left" src="assets/img/logo.png" />
           <!--  wave-->
           <div class="chat-bubble left slide-left">
     
@@ -42,7 +42,7 @@
           </div>
         </div>
         <div *ngIf="message.sentBy === 'user'">
-          <img class="profile-pic right" src="assets/img/water.jpg" />
+          <img class="profile-pic right" src="assets/img/norman.jpg" />
           <!--  wave-->
           <div class="chat-bubble right slide-right">
     

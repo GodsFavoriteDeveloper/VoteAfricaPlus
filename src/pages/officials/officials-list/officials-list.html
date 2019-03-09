@@ -1,60 +1,21 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>officials-list</ion-title>
+  <ion-navbar color="clean">
+    <ion-title>Elected Officials</ion-title>
   </ion-navbar>
+  <ion-toolbar color="primary">
+    <ion-searchbar (ionInput)="getItems($event)" showCancelButton="true" animated="true"></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="assets/img/yemi.jpg">
-        </ion-avatar>
-        <h2>President Buhari</h2>
-        <ion-icon name="heart-outline" color="danger" item-end></ion-icon>
-      </ion-item>
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="assets/img/yemi.jpg">
-        </ion-avatar>
-        <h2>President Buhari</h2>
-        <ion-icon name="heart-outline" color="danger" item-end></ion-icon>
-      </ion-item>
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="assets/img/yemi.jpg">
-        </ion-avatar>
-        <h2>President Buhari</h2>
-        <ion-icon name="heart-outline" color="danger" item-end></ion-icon>
-      </ion-item>
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="assets/img/yemi.jpg">
-        </ion-avatar>
-        <h2>President Buhari</h2>
-        <ion-icon name="heart-outline" color="danger" item-end></ion-icon>
-      </ion-item>
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="assets/img/yemi.jpg">
-        </ion-avatar>
-        <h2>President Buhari</h2>
-        <ion-icon name="heart-outline" color="danger" item-end></ion-icon>
-      </ion-item>
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="assets/img/yemi.jpg">
-        </ion-avatar>
-        <h2>President Buhari</h2>
-        <ion-icon name="heart-outline" color="danger" item-end></ion-icon>
-      </ion-item>
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="assets/img/yemi.jpg">
-        </ion-avatar>
-        <h2>President Buhari</h2>
-        <button item-end ion-button color="danger">Follow</button>
-      </ion-item>
+      <button (click)="navigate(official)" *ngFor="let official of officials" ion-item>
+          <ion-avatar item-start>
+            <img [src]="official.thumb">
+          </ion-avatar>
+          <h2 [innerHTML]="official.name"></h2>
+          <p [innerHTML]="official.position"></p>
+      </button>
   </ion-list>
 
 </ion-content>

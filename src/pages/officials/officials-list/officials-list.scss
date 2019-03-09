@@ -6,4 +6,10 @@ page-officials-list {
     .item-md p {
         font-size: 1.2rem !important;
     }
+    ion-avatar img {
+        border-radius: 5% !important;
+        overflow: hidden;
+        width: 40px;
+        height: 40px;
+    }
 }

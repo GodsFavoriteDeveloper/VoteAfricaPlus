@@ -1,0 +1,37 @@
+[
+    {
+        "name": "APC",
+        "shortName": "APC",
+        "logo": "assets/img/parties/apc.jpg",
+        "cover": "assets/img/parties/apc_cover.jpg",
+        "background": "<p>The All Progressives Congress (APC) is a political party in Nigeria, formed on 6 February 2013 in anticipation of the 2015 elections. APC candidate Muhammadu Buhari won the presidential election by almost 2.6 million votes. Incumbent President Goodluck Jonathan conceded defeat on 31 March. This was the first time in Nigeria’s political history that an opposition political party unseated a governing party in a general election and one in which power transferred peacefully from one political party to another. In addition, the APC won the majority of seats in the Senate and the House of Representatives in the 2015 elections, though it fell shy of winning a super-majority to override the ability of the opposition People’s Democratic Party to block legislation.</p><p></p>"
+    },
+    {
+        "name": "Action Democratic Party",
+        "shortName": "ADP",
+        "logo": "assets/img/parties/adp.jpeg",
+        "cover": "",
+        "background": ""
+    },
+    {
+        "name": "Green Party of Nigeria",
+        "shortName": "GPN",
+        "logo": "assets/img/parties/green.jpeg",
+        "cover": "",
+        "background": ""
+    },
+    {
+        "name": "Labour Party",
+        "shortName": "Labour Party",
+        "logo": "assets/img/parties/labour.jpg",
+        "cover": "",
+        "background": ""
+    },
+    {
+        "name": "People's Democratic Party",
+        "shortName": "PDP",
+        "logo": "assets/img/parties/pdp.png",
+        "cover": "",
+        "background": ""
+    }
+]

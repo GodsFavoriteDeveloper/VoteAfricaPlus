@@ -31,18 +31,18 @@
           <ion-col class="col" col-9="">
               <p class="tops">Elected Officials</p>
           </ion-col>
-          <ion-col text-right (click)="seeAll()" class="col" col-3="">
-              <p item-end class="tops">See All</p>
+          <ion-col text-right class="col" col-3="">
+              <p (click)="navigate('OfficialsListPage')" item-end class="tops">See All</p>
           </ion-col>
         </ion-row>
     
     
         <ion-slides spaceBetween="3" slidesPerView="4.2" pager="false">
-            <ion-slide *ngFor="let post of posts" (click)="navigate(post)">
-              <ion-card class="poster-card" [style.backgroundImage]="'url(' + post.thumb + ')'">
+          <ion-slide *ngFor="let post of posts" (click)="navigateToOfficials(post)">
+            <ion-card class="poster-card" [style.backgroundImage]="'url(' + post.thumb + ')'">
             </ion-card>
-            </ion-slide>
-      </ion-slides>
+          </ion-slide>
+        </ion-slides>
   
   
   
@@ -51,44 +51,25 @@
             <p class="tops">Follow Your Party</p>
         </ion-col>
         <ion-col text-right class="col" col-3="">
-            <p class="tops">See All</p>
+            <p (click)="navigate('PartiesPage')" class="tops">See All</p>
         </ion-col>
       </ion-row>
-  
-  
+
+
       <ion-slides spaceBetween="3" slidesPerView="4.2" pager="false">
-          <ion-slide>
-            <ion-card class="poster-card" [style.backgroundImage]="'url(assets/img/parties/apc.jpg)'">
+        <ion-slide *ngFor="let party of parties" (click)="navigateToParty(party)">
+          <ion-card class="poster-card" [style.backgroundImage]="'url(' + party.logo + ')'">
           </ion-card>
-          </ion-slide>
-      
-          <ion-slide>
-            <ion-card class="poster-card" [style.backgroundImage]="'url(assets/img/parties/pdp.png)'">
-          </ion-card>
-          </ion-slide>
-      
-          <ion-slide>
-            <ion-card class="poster-card" [style.backgroundImage]="'url(assets/img/parties/labour.jpg)'">
-          </ion-card>
-          </ion-slide>
+        </ion-slide>
+      </ion-slides>
   
-          <ion-slide>
-            <ion-card class="poster-card" [style.backgroundImage]="'url(assets/img/parties/adp.jpeg)'">
-          </ion-card>
-          </ion-slide>
-          
-          <ion-slide>
-            <ion-card class="poster-card" [style.backgroundImage]="'url(assets/img/parties/green.jpeg)'">
-          </ion-card>
-          </ion-slide>
-        </ion-slides>
   
         <ion-row class="row">
           <ion-col class="col" col-9="">
-              <p class="tops">Analyst Reviews</p>
+              <p class="tops">Latest Petitions</p>
           </ion-col>
           <ion-col text-right class="col" col-3="">
-              <p class="tops">See All</p>
+              <p (click)="navigate('PetitionsPage')" class="tops">See All</p>
           </ion-col>
         </ion-row>
   
@@ -97,27 +78,30 @@
           </div>--> 
   
       <ion-list>
-        <button ion-item>
-          <ion-avatar item-start>
-            <img src="assets/img/yemi.jpg">
-          </ion-avatar>
-          <p>President Buhari</p>
-          <button (click)="follow()" item-end ion-button [style.background-color]="isFollowing ? '#209485' : '#f53d3d'">{{isFollowing ? 'Unfollow' : 'Follow'}}</button>
-        </button>
         <ion-item>
           <ion-avatar item-start>
-            <img src="assets/img/yemi.jpg">
+            <img src="http://www.grayston.co.za/wp-content/uploads/2018/08/Lokuthula-Lodges-73_ss20635.jpg">
           </ion-avatar>
-          <p>President Buhari</p>
-          <button item-end ion-button color="danger">Follow</button>
-        </ion-item>
-        <ion-item>
-          <ion-avatar item-start>
-            <img src="assets/img/yemi.jpg">
-          </ion-avatar>
-          <p>President Buhari</p>
-          <button item-end ion-button color="danger">Follow</button>
-        </ion-item>
+          <h2>Support urgent reforms to ensure Zimbabwe's 2018 Elections will be Free, Fair and Credible</h2>
+          <p>Zimbabwe is a country that has seen an estimated 40% of its population migrate due to economic</p>
+          <ion-icon name="ios-arrow-forward" item-end small></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="http://www.grayston.co.za/wp-content/uploads/2018/08/Lokuthula-Lodges-73_ss20635.jpg">
+        </ion-avatar>
+        <h2>Support urgent reforms to ensure Zimbabwe's 2018 Elections will be Free, Fair and Credible</h2>
+        <p>Zimbabwe is a country that has seen an estimated 40% of its population migrate due to economic</p>
+        <ion-icon name="ios-arrow-forward" item-end small></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="http://www.grayston.co.za/wp-content/uploads/2018/08/Lokuthula-Lodges-73_ss20635.jpg">
+      </ion-avatar>
+      <h2>Support urgent reforms to ensure Zimbabwe's 2018 Elections will be Free, Fair and Credible</h2>
+      <p>Zimbabwe is a country that has seen an estimated 40% of its population migrate due to economic</p>
+      <ion-icon name="ios-arrow-forward" item-end small></ion-icon>
+    </ion-item>
       </ion-list>
 
 

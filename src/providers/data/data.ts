@@ -19,6 +19,10 @@ export class DataProvider {
     return this.http.get('assets/json/officials.json')
   }
 
+  getParties(){
+    return this.http.get('assets/json/parties.json')
+  }
+
   getArticles(a): Observable<any>{
     return this.http.get(this.url + 'get_category_posts/?slug=' + a)
   }

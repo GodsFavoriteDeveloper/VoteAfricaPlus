@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>party</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+      <img [src]="partyData.cover">
+    
+      <ion-item>
+        <ion-icon name="information-circle" item-start large></ion-icon>
+        <h2>{{partyData.name}}</h2>
+        <p>Est. 1975</p>
+      </ion-item>
+  </ion-card>
+
+  <ion-toolbar>
+      <ion-segment [(ngModel)]="party">
+          <ion-segment-button value="background">
+            Background
+          </ion-segment-button>
+          <ion-segment-button value="candidates">
+            Candidates {{'(' + countOfficials + ')'}}
+          </ion-segment-button>
+        </ion-segment>
+  </ion-toolbar>
+    
+  
+  <div [ngSwitch]="party">
+    <ion-list *ngSwitchCase="'background'">
+      <div style="padding: 0 10px" [innerHTML]="partyData.background"></div>
+    </ion-list>
+  
+    <ion-list *ngSwitchCase="'candidates'">
+      <ion-list>
+        <button (click)="navigate(official)" *ngFor="let official of officials" ion-item>
+            <ion-avatar item-start>
+              <img [src]="official.thumb">
+            </ion-avatar>
+            <h2 [innerHTML]="official.name"></h2>
+            <p [innerHTML]="official.position"></p>
+        </button>
+    </ion-list>
+    </ion-list>
+  </div>
+
+  
+
+</ion-content>

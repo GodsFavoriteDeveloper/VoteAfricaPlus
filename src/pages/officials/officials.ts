@@ -11,6 +11,7 @@ import { DataProvider } from '../../providers/data/data';
 export class OfficialsPage {
   isFollowing: boolean = false;
   posts: any;
+  parties: any;
   pages: any = "officials";
   searchEnabled: boolean = false;
 
@@ -19,7 +20,8 @@ export class OfficialsPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad OfficialsPage');
-    this.loadData()
+    this.loadData();
+    this.loadParties();
   }
 
   loadData(){
@@ -31,19 +33,35 @@ export class OfficialsPage {
     })
   }
 
-  navigate(a){
+  loadParties(){
+    this.data.getParties().subscribe((data)=>{
+      console.log(data);
+      this.parties = data;
+    }, (error)=>{
+      console.log(error)
+    })
+  }
+
+  navigateToOfficials(a){
     this.navCtrl.push('OfficialPage', {
       data: a
     })
+  }
+
+  navigateToParty(a){
+    this.navCtrl.push('PartyPage', {
+      party: a
+    })
+  }
+
+  navigate(a){
+    this.navCtrl.push(a)
   }
 
   async selectSegment(a){
     this.searchEnabled = a;
   }
 
-  seeAll(){
-    this.navCtrl.push('OfficialsListPage')
-  }
 
   search(){
     this.navCtrl.push('SearchPage')
