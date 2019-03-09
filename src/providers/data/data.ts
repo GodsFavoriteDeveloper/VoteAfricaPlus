@@ -2,12 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Storage } from '@ionic/storage';
+const STORAGE_KEY = 'officials';
 
 
 @Injectable()
 export class DataProvider {
   url: string = 'http://vote-africa.org/nigeria/api/';
   favoriteOfficials: any = [];
+  
 
   constructor(public http: HttpClient, public storage: Storage) {
     console.log('Hello DataProvider Provider');
@@ -25,40 +27,38 @@ export class DataProvider {
     return this.http.post(this.url + 'respond/submit_comment/?post_id=' + a + '&name=' + b + '&email=' + c + '&content=' + d, {}, {})
   }
 
-  addOfficialToFavorite(official){
-    this.favoriteOfficials.push(official)
-      this.storage.set('officials', this.favoriteOfficials).then((data)=>{
-        console.log(data)
-      });
-
-  }
-
-  removeOfficialFromFavorites(official){
-    this.storage.get('officials').then((data)=>{
-      console.log(data);
-      const position = data.findIndex((officialEl)=>{
-        return officialEl.id == official.id;
-      })
-      console.log(position + " is the current position after deletion")
-      this.favoriteOfficials = data.splice(position, 1);
-      this.storage.remove('officials');
-      this.storage.set('officials', this.favoriteOfficials).then((data)=>{
-        console.log(data);
-      });
+  isFavorite(filmId) {
+    return this.getAllFavoriteFilms().then(result => {
+      console.log(result)
+      //return result && result.indexOf(filmId) !== -1;
+      return result.find((quoteEl) => {
+        return quoteEl.id === filmId.id;
     });
-    
+    });
   }
-
-  getFavoriteOfficials(){
-    return this.favoriteOfficials.splice()
+ 
+  favoriteFilm(filmId) {
+    return this.getAllFavoriteFilms().then(result => {
+      if (result) {
+        result.push(filmId);
+        return this.storage.set(STORAGE_KEY, result);
+      } else {
+        return this.storage.set(STORAGE_KEY, [filmId]);
+      }
+    });
   }
-
-  isFavoriteOfficial(official){
-    this.storage.get('officials').then((data)=>{     
-    })
-    return this.favoriteOfficials.find((officialEl)=>{
-      return officialEl.id == official.id
-    })
+ 
+  unfavoriteFilm(filmId) {
+    return this.getAllFavoriteFilms().then(result => {
+      if (result) {
+        var index = result.indexOf(filmId);
+        result.splice(index, 1);
+        return this.storage.set(STORAGE_KEY, result);
+      }
+    });
   }
-
+ 
+  getAllFavoriteFilms() {
+    return this.storage.get(STORAGE_KEY);
+  }
 }

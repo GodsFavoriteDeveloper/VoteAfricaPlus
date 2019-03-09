@@ -10,8 +10,8 @@
     
       <div>
         <div class="twPc-button">
-            <button *ngIf="!isFavorite(data)" small (click)="addToFavorites(data)" ion-button [style.background-color]="'#209485'">Follow</button>
-            <button *ngIf="isFavorite(data)" small (click)="removeFromFavorites(data)" ion-button [style.background-color]="'#f53d3d'">Unfollow</button>
+            <button small (click)="favoriteFilm()" *ngIf="!isFavorite" ion-button [style.background-color]="'#209485'">Follow</button>
+            <button small (click)="unfavoriteFilm()" *ngIf="isFavorite" ion-button [style.background-color]="'#f53d3d'">Unfollow</button>
             <button (click)="share()" small ion-button>Share</button>
         </div>
     

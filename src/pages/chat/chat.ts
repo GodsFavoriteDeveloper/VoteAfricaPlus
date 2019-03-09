@@ -47,7 +47,7 @@ export class ChatPage implements OnInit {
   async onChangeText(a:any){
     console.log(a)
     if(this.formValue.length > 2){
-      this.disabled = true
+      this.disabled = false
     } else {
       this.disabled = true
     }

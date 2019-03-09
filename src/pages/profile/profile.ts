@@ -19,13 +19,15 @@ export class ProfilePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfilePage');
-    this.avatar = "assets/img/buhari_thumb.jpg";
+    this.avatar = "assets/img/norman.jpg";
   }
 
   ionViewWillEnter(){
+    console.log(this.favoriteOfficials)
     this.storage.get('officials').then((data)=>{
-      console.log(data)
+      console.log(data);
       this.favoriteOfficials = data;
+      console.log(data)
     })
   }
 

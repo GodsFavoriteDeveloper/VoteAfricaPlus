@@ -30,16 +30,36 @@
     @font-face {
       font-family: Rubik700;
       src: url(../assets/fonts/rubik-v7-latin-700.woff2)
+    }
+    @font-face {
+      font-family: Nexa-Black;
+      src: url(../assets/fonts/nexa-black-webfont.woff2)
       }
+      @font-face {
+        font-family: Nexa-Bold;
+        src: url(../assets/fonts/nexa-bold-webfont.woff2)
+      }
+      @font-face {
+        font-family: Nexa-Heavy;
+        src: url(../assets/fonts/nexa-heavy-webfont.woff2)
+      }
+      @font-face {
+        font-family: Nexa-Light;
+        src: url(../assets/fonts/nexa-light-webfont.woff2)
+      }
+      @font-face {
+        font-family: Nexa-Regular;
+        src: url(../assets/fonts/nexa-regular-webfont.woff2)
+      }  
     h1, h2, h3, h4, h5, h6, ion-label, span, ion-card-title {
-    font-family: 'Rubik' !important;
+    font-family: 'Nexa-Bold' !important;
     }
     ion-title {
-      font-family: 'Rubik' !important;
+      font-family: 'Nexa-Bold' !important;
       text-transform: uppercase !important;
     }
     body, p, a, ion-card-content, ion-card, ion-content, ion-input, ion-header {
-    font-family: 'Rubik' !important;
+    font-family: 'Nexa-Regular' !important;
     }
     .toolbar-title-md {
       font-size: 15px

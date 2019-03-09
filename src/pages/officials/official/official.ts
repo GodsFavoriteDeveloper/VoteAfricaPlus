@@ -15,10 +15,14 @@ export class OfficialPage {
   data: any;
   posts: any;
   favoriteOfficials: any;
+  isFavorite = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public dataProvider: DataProvider, public storage: Storage, private socialSharing: SocialSharing) {
     this.data = this.navParams.get('data');
-    console.log(this.data)
+    //console.log(this.data)
+    this.dataProvider.isFavorite(this.data).then(isFav => {
+      this.isFavorite = isFav;
+    })
   }
 
   ionViewDidLoad() {
@@ -26,31 +30,22 @@ export class OfficialPage {
   }
 
   ionViewWillEnter(){
-    this.storage.get('officials').then((data)=>{
-      console.log(data)
-      this.favoriteOfficials = data;
-    })
+   
   }
 
-  addToFavorites(data){
-    this.dataProvider.addOfficialToFavorite(data)
+  favoriteFilm() {
+    this.dataProvider.favoriteFilm(this.data).then(() => {
+      this.isFavorite = true;
+    });
+  }
+ 
+  unfavoriteFilm() {
+    this.dataProvider.unfavoriteFilm(this.data).then(() => {
+      this.isFavorite = false;
+    });
   }
 
-  removeFromFavorites(data){
-    this.dataProvider.removeOfficialFromFavorites(data);
-  }
 
-  isFavorite(data){
-    if(this.favoriteOfficials){
-      return this.favoriteOfficials.find((officialEl)=>{
-        console.log(officialEl.id + "  " + data.id)
-        return officialEl.id == data.id
-      })
-    }else {
-      return false
-    }
-    
-  }
 
   loadArticles(a){
     let loader = this.loadingCtrl.create({
