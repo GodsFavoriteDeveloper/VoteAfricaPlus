@@ -32,8 +32,8 @@
           <ul class="twPc-Arrange">
             <li class="twPc-ArrangeSizeFit">
               <a>
-                <span class="twPc-StatLabel twPc-block">Days In Office</span>
-                <span class="twPc-StatValue">{{data.daysInOffice}}</span>
+                <span class="twPc-StatLabel twPc-block">Political Party</span>
+                <span class="twPc-StatValue">{{data.party}}</span>
               </a>
             </li>
             <li class="twPc-ArrangeSizeFit">
@@ -69,10 +69,10 @@
                     <ion-icon small name="ios-arrow-forward" item-end></ion-icon>
                   </button>
          
-                  <button ion-item (click)="navigate('OfficialInfoPage', data.promises)">
+                  <button ion-item (click)="navigate('OfficialPromisesPage', data.promises)">
                     <ion-icon name="clipboard" item-start></ion-icon>
                     <h2>Promises Made</h2>
-                    <ion-badge item-end>{{data.promisesMade}}</ion-badge>
+                    <ion-badge item-end>{{data.promises.length}}</ion-badge>
                   </button>
       
        

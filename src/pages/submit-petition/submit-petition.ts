@@ -9,9 +9,9 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
   templateUrl: 'submit-petition.html',
 })
 export class SubmitPetitionPage {
-  petImage: any = "No Image Submitted";
-  petTitle: any;
-  petBody: any;
+  petImage: any;
+  petTitle: any = "";
+  petBody: any = "";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private camera: Camera) {
   }
@@ -32,7 +32,8 @@ export class SubmitPetitionPage {
               sourceType: this.camera.PictureSourceType.CAMERA,
               destinationType: this.camera.DestinationType.FILE_URI,
               encodingType: this.camera.EncodingType.JPEG,
-              mediaType: this.camera.MediaType.PICTURE
+              mediaType: this.camera.MediaType.PICTURE,
+              allowEdit: true
             }
             
             this.camera.getPicture(options).then((imageData) => {
@@ -52,7 +53,8 @@ export class SubmitPetitionPage {
               sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
               destinationType: this.camera.DestinationType.FILE_URI,
               encodingType: this.camera.EncodingType.JPEG,
-              mediaType: this.camera.MediaType.PICTURE
+              mediaType: this.camera.MediaType.PICTURE,
+              allowEdit: true
             }
             
             this.camera.getPicture(options).then((imageData) => {
@@ -69,5 +71,19 @@ export class SubmitPetitionPage {
     })
     alert.present()
   }
+
+  submitPetition(){
+    if(this.petTitle !== "" && this.petBody !== ""){
+      let alert = this.alertCtrl.create({
+        subTitle: "Petition Submitted Successfully"
+      })
+      alert.present();
+    } else {
+      let alert = this.alertCtrl.create({
+        subTitle: "Please complete all fields before submission"
+      })
+      alert.present()
+    }
+  } 
 
 }

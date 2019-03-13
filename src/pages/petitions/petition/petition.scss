@@ -1,3 +1,31 @@
 page-petition {
-
+    .scroll-content {
+        margin-top: 0px !important;
+    }
+    .toolbar-background-md {
+        background: transparent !important;
+    }
+    ion-title {
+        display: none !important;
+    }
+    h2 {
+        font-size: 1.6rem !important;
+    }
+    .item-md h2 {
+        font-weight: 600 !important;
+    }
+    p:first-child:first-letter {
+        color: #209485;
+        float: left;
+        font-family: Georgia;
+        font-size: 75px;
+        line-height: 60px;
+        padding-top: 4px;
+        padding-right: 8px;
+        padding-left: 3px;
+      }
+      .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+        color: #eee !important;
+        background-color: rgba(0, 0, 0, 0.5) !important;
+    }
 }

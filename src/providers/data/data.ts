@@ -23,6 +23,10 @@ export class DataProvider {
     return this.http.get('assets/json/parties.json')
   }
 
+  getPetitions(){
+    return this.http.get('assets/json/petitions.json');
+  }
+
   getArticles(a): Observable<any>{
     return this.http.get(this.url + 'get_category_posts/?slug=' + a)
   }

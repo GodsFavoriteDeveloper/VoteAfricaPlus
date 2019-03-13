@@ -14,37 +14,29 @@
         <p>Est. 1975</p>
       </ion-item>
   </ion-card>
+  <span style="height: 2px; color: #eee">.</span>
 
-  <ion-toolbar>
-      <ion-segment [(ngModel)]="party">
-          <ion-segment-button value="background">
-            Background
-          </ion-segment-button>
-          <ion-segment-button value="candidates">
-            Candidates {{'(' + countOfficials + ')'}}
-          </ion-segment-button>
-        </ion-segment>
-  </ion-toolbar>
+  <ion-card>
+    <ion-list>
+          <button ion-item (click)="navigate('OfficialsListPage', partyData)">
+            <ion-icon name="person" item-start></ion-icon>
+            <h2>Elected Candidates</h2>
+            <ion-badge item-end>{{countOfficials}}</ion-badge>
+          </button>
+
+          <button ion-item (click)="comingSoon('Manifestos coming soon')">
+            <ion-icon name="book" item-start></ion-icon>
+            <h2>Manifesto</h2>
+            <ion-icon small name="ios-arrow-forward" item-end></ion-icon>
+          </button>
+    </ion-list>
     
-  
-  <div [ngSwitch]="party">
-    <ion-list *ngSwitchCase="'background'">
-      <div style="padding: 0 10px" [innerHTML]="partyData.background"></div>
-    </ion-list>
-  
-    <ion-list *ngSwitchCase="'candidates'">
-      <ion-list>
-        <button (click)="navigate(official)" *ngFor="let official of officials" ion-item>
-            <ion-avatar item-start>
-              <img [src]="official.thumb">
-            </ion-avatar>
-            <h2 [innerHTML]="official.name"></h2>
-            <p [innerHTML]="official.position"></p>
-        </button>
-    </ion-list>
-    </ion-list>
-  </div>
+  </ion-card>
 
-  
+  <span style="height: 2px; color: #eee">.</span>
+
+  <ion-card>
+    <div style="padding: 10px 10px" [innerHTML]="partyData.background"></div>
+  </ion-card>
 
 </ion-content>

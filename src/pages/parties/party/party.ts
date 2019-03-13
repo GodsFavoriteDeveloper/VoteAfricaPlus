@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { DataProvider } from '../../../providers/data/data';
 
 
@@ -12,8 +12,9 @@ export class PartyPage {
   partyData: any;
   officials: any;
   countOfficials: any;
+  party: any = "background";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public dataProvider: DataProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public dataProvider: DataProvider, public alertCtrl: AlertController) {
     this.partyData = this.navParams.get('party');
     console.log(this.partyData)
   }
@@ -31,6 +32,18 @@ export class PartyPage {
         //post.background = post.background.substring(0, 100);
       }
     })
+  }
+
+  navigate(a){
+    this.navCtrl.push(a)
+  }
+
+  comingSoon(a){
+    let alert = this.alertCtrl.create({
+      subTitle: a
+    })
+
+    alert.present()
   }
 
 }

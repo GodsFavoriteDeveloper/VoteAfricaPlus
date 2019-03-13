@@ -6,37 +6,31 @@
 
 <ion-content>
 
-    <ion-card *ngFor="let item of items">
-        <ion-item-sliding (click)="navigate()">
-          <ion-item>
-            <ion-avatar item-start>
-              <img src="http://www.grayston.co.za/wp-content/uploads/2018/08/Lokuthula-Lodges-73_ss20635.jpg">
-            </ion-avatar>
-            <h2>Support urgent reforms to ensure Zimbabwe's 2018 Elections will be Free, Fair and Credible</h2>
-            <p>Zimbabwe is a country that has seen an estimated 40% of its population migrate due to economic</p>
-        </ion-item>
-        <ion-item-options side="right">
-        <button ion-button color="primary">
-          <ion-icon name="mail"></ion-icon>
-          Email
-        </button>
-      </ion-item-options>
-        </ion-item-sliding>
+      <ion-card (click)="navigate(petition)" *ngFor="let petition of petitions">
+        <img [src]="petition.image">
+      
+        <ion-card-content>
+          <ion-card-title>
+            {{petition.title}}
+          </ion-card-title>
+          <p>{{petition.body.substring(0, 100) + "...."}}</p>
+        </ion-card-content>
+      
         <ion-row>
-            <ion-col>
-              <button ion-button icon-left clear small>
-                <ion-icon name="thumbs-up"></ion-icon>
-                <div>12 Likes</div>
-              </button>
-            </ion-col>
-            <ion-col>
-              <button ion-button icon-left clear small>
-                <ion-icon name="text"></ion-icon>
-                <div>4 Comments</div>
-              </button>
-            </ion-col>
-          </ion-row>
-        
+          <ion-col>
+            <button (click)="support()" ion-button icon-start clear small>
+              <ion-icon name="thumbs-up"></ion-icon>
+              <div>&nbsp;Support</div>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button (click)="share()" ion-button icon-start clear small>
+              <ion-icon name="share"></ion-icon>
+              <div>&nbsp;Share</div>
+            </button>
+          </ion-col>
+        </ion-row>
+      
       </ion-card>
 
       <ion-fab bottom right>

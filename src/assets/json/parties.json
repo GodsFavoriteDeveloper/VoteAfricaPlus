@@ -10,28 +10,28 @@
         "name": "Action Democratic Party",
         "shortName": "ADP",
         "logo": "assets/img/parties/adp.jpeg",
-        "cover": "",
+        "cover": "assets/img/parties/adp_cover.jpg",
         "background": ""
     },
     {
         "name": "Green Party of Nigeria",
         "shortName": "GPN",
         "logo": "assets/img/parties/green.jpeg",
-        "cover": "",
-        "background": ""
+        "cover": "assets/img/parties/green_cover.jpeg",
+        "background": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>"
     },
     {
         "name": "Labour Party",
         "shortName": "Labour Party",
         "logo": "assets/img/parties/labour.jpg",
-        "cover": "",
-        "background": ""
+        "cover": "assets/img/parties/labour_cover.jpg",
+        "background": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>"
     },
     {
         "name": "People's Democratic Party",
         "shortName": "PDP",
         "logo": "assets/img/parties/pdp.png",
-        "cover": "",
-        "background": ""
+        "cover": "assets/img/parties/pdp_cover.png",
+        "background": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>"
     }
 ]

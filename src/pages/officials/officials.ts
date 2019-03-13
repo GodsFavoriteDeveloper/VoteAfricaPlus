@@ -37,6 +37,12 @@ export class OfficialsPage {
     this.data.getParties().subscribe((data)=>{
       console.log(data);
       this.parties = data;
+      /*this.parties.sort((array)=>{
+        return 0.5 - Math.random();
+      })
+      this.parties.forEach(element => {
+        
+      });*/
     }, (error)=>{
       console.log(error)
     })
